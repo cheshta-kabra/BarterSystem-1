@@ -37,7 +37,7 @@ export default class WelcomeScreen extends React.Component{
     render(){
         return(
             <View style={styles.container}>
-                <View><Text style={styles.title}>BOOK SANTA</Text></View>
+                <View><Text style={styles.title}>Barter System</Text></View>
                 <TextInput style={styles.loginBox} 
                 placeholder='enter email address' keyboardType='email-address'
                 onChangeText={(text)=>{this.setState({
