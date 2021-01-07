@@ -1,4 +1,6 @@
 import firebase from 'firebase'
+require('@firebase/firestore')
+
 var firebaseConfig = {
     apiKey: "AIzaSyA8Qp_pcxEG_xjcHReZLW4BseOApT3YbKQ",
     authDomain: "barter-system-c3389.firebaseapp.com",
@@ -10,4 +12,5 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  export default firebase.firestore()
+  export default !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
+
